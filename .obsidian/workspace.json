@@ -13,15 +13,44 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02_stored/20260517_記録のための日記から、対話で育てる日記へ ーClaude × Obsidian × MCPで作る思考のジャーナリングー  フューチャー技術ブログ.md",
+                "file": "02_stored/20260607_親が元気なうちにやるべき「6つの準備」.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "20260517_記録のための日記から、対話で育てる日記へ ーClaude × Obsidian × MCPで作る思考のジャーナリングー  フューチャー技術ブログ"
+              "title": "20260607_親が元気なうちにやるべき「6つの準備」"
+            }
+          },
+          {
+            "id": "99d7b3722a565948",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "03_idea/02_撤退戦2026_情報集め.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "02_撤退戦2026_情報集め"
+            }
+          },
+          {
+            "id": "859af02daad7bef6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "03_idea/02_撤退戦2026_情報集め.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "02_撤退戦2026_情報集め"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -194,14 +223,23 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c61ccedef9cb6f05",
+  "active": "99d7b3722a565948",
   "lastOpenFiles": [
-    "02_stored/20260525_Playwrightのcodegenでブラウザ操作スクリプトを自動生成する.md",
+    "03_idea/01_撤退戦2025.md",
+    "20260614_名古屋やること.md",
+    "00_temporary/無人PC（TeamViewer）向け 自動ログイン設定メモ.md",
+    "00_temporary/Claude Codeに人生を管理させて3ヶ月、一番効いたのは自動化じゃなかった.md",
+    "02_stored/20260607_親が元気なうちにやるべき「6つの準備」.md",
+    "02_stored/20260517_記録のための日記から、対話で育てる日記へ ーClaude × Obsidian × MCPで作る思考のジャーナリングー  フューチャー技術ブログ.md",
     "02_stored/20260517_終活(AIの回答）.md",
+    "03_idea/02_撤退戦2026_情報集め.md",
+    "02_stored/20260525_Playwrightのcodegenでブラウザ操作スクリプトを自動生成する.md",
+    "03_idea/02_撤退戦2026.md",
+    "00_temporary/親が元気なうちにやるべき「6つの準備」.md",
+    "03_idea",
     "00_temporary/Playwrightのcodegenでブラウザ操作スクリプトを自動生成する.md",
     "01_index/index.md",
     "00_temporary/終活(AIの回答）.md",
-    "02_stored/20260517_記録のための日記から、対話で育てる日記へ ーClaude × Obsidian × MCPで作る思考のジャーナリングー  フューチャー技術ブログ.md",
     "ようこそ.md",
     "00_temporary/記録のための日記から、対話で育てる日記へ ーClaude × Obsidian × MCPで作る思考のジャーナリングー  フューチャー技術ブログ.md",
     "01_index",
