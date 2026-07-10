@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>20260711_名古屋やること.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="202607-名古屋やること">202607 名古屋やること</h1>
+<p>ダイヤ: <strong>7/11は土曜ダイヤ</strong>（こだま・相鉄・地下鉄とも土曜表で確認）</p>
+<p>市内ルート: 桜通線→鶴舞線→名城線（御器所経由）／東山線不使用</p>
+<h2 id="新幹線予約済み">新幹線（予約済み）</h2>
+<table>
+<thead>
+<tr>
+<th>方向</th>
+<th>列車</th>
+<th>区間</th>
+<th>座席</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>往路</td>
+<td><strong>こだま801</strong></td>
+<td>新横浜 <strong>6:48</strong> → 名古屋 <strong>9:06</strong></td>
+<td>EX早特3［グリーン］</td>
+</tr>
+<tr>
+<td>復路</td>
+<td><strong>こだま850</strong></td>
+<td>名古屋 <strong>19:38</strong> → 新横浜 <strong>21:53</strong></td>
+<td>EX早特3［グリーン］</td>
+</tr>
+</tbody>
+</table>
+<h2 id="711土-往路">7/11(土) 往路</h2>
+<table>
+<thead>
+<tr>
+<th>7/11(土)</th>
+<th>イベント</th>
+<th>注意事項</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5:54-6:20</td>
+<td>海老名⇒新横浜</td>
+<td>相鉄直通・乗り換えなし。<strong>土曜は5:41便なし</strong>（5:41は日祝ダイヤ）</td>
+</tr>
+<tr>
+<td>6:20-6:37</td>
+<td>（徒歩）新横浜駅</td>
+<td>トイレ・朝食・新幹線へ・約17分</td>
+</tr>
+<tr>
+<td>6:48-9:06</td>
+<td><strong>こだま801</strong> / 新横浜→名古屋</td>
+<td><strong>予約済み</strong></td>
+</tr>
+<tr>
+<td>9:06-9:16</td>
+<td>（徒歩）名古屋駅→高島屋</td>
+<td>桜通口側・JRセントラルタワーズ直結・約10分</td>
+</tr>
+<tr>
+<td>9:16-10:00</td>
+<td>高島屋 開店待ち</td>
+<td><strong>開店は10:00</strong>（B1・B2食料品含む）。トイレ・休憩。1階デリシャスコートのパン売場は7:30から営業</td>
+</tr>
+<tr>
+<td>10:00-10:20</td>
+<td>高島屋B1/B2で弁当購入</td>
+<td>デパ地下は開店直後が空いている</td>
+</tr>
+<tr>
+<td>10:20-10:30</td>
+<td>（徒歩）高島屋→地下鉄名古屋駅</td>
+<td>桜通線ホームへ・約10分</td>
+</tr>
+<tr>
+<td>10:30-10:45</td>
+<td>名古屋-御器所（桜通線）</td>
+<td>東山線は使わない。土曜日中は約10分間隔</td>
+</tr>
+<tr>
+<td>10:45-10:50</td>
+<td>（徒歩）御器所</td>
+<td>桜通⇔鶴舞乗換・約5分</td>
+</tr>
+<tr>
+<td>10:50-10:55</td>
+<td>御器所-八事（鶴舞線）</td>
+<td>名城線ではない</td>
+</tr>
+<tr>
+<td>10:55-11:00</td>
+<td>（徒歩）八事</td>
+<td>鶴舞⇔名城乗換・約5分</td>
+</tr>
+<tr>
+<td>11:00-11:02</td>
+<td>八事-総合リハビリセンター（名城線）</td>
+<td>1駅・約2分</td>
+</tr>
+<tr>
+<td>11:02-11:05</td>
+<td>（徒歩）総合リハビリセンター</td>
+<td>駅⇔施設・約3分</td>
+</tr>
+<tr>
+<td>11:05-11:15</td>
+<td>（徒歩）総合リハビリセンター→尾関和子さん宅</td>
+<td>約10分</td>
+</tr>
+</tbody>
+</table>
+<h2 id="711土-復路">7/11(土) 復路</h2>
+<table>
+<thead>
+<tr>
+<th>7/11(土)</th>
+<th>イベント</th>
+<th>注意事項</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>11:15-17:23</td>
+<td>尾関和子さん宅（滞在目安 約 6 時間 8 分）</td>
+<td></td>
+</tr>
+<tr>
+<td>17:23-17:33</td>
+<td>（徒歩）尾関和子さん宅→総合リハビリセンター</td>
+<td>約10分</td>
+</tr>
+<tr>
+<td>17:33-17:36</td>
+<td>（徒歩）総合リハビリセンター</td>
+<td>施設⇔駅・約3分</td>
+</tr>
+<tr>
+<td>17:36-17:38</td>
+<td>総合リハビリセンター-八事（名城線）</td>
+<td></td>
+</tr>
+<tr>
+<td>17:38-17:43</td>
+<td>（徒歩）八事</td>
+<td>名城⇔鶴舞乗換・約5分</td>
+</tr>
+<tr>
+<td>17:43-17:48</td>
+<td>八事-御器所（鶴舞線）</td>
+<td>名城線ではない</td>
+</tr>
+<tr>
+<td>17:48-17:53</td>
+<td>（徒歩）御器所</td>
+<td>鶴舞⇔桜通乗換・約5分</td>
+</tr>
+<tr>
+<td>17:53-18:08</td>
+<td>御器所-名古屋（桜通線）</td>
+<td>東山線は使わない</td>
+</tr>
+<tr>
+<td>18:08-18:18</td>
+<td>（徒歩）名古屋駅</td>
+<td>地下鉄⇔新幹線・約10分</td>
+</tr>
+<tr>
+<td>18:28-19:38</td>
+<td>名古屋駅（新幹線ホーム待合）</td>
+<td>余裕約1時間10分</td>
+</tr>
+<tr>
+<td>19:38-21:53</td>
+<td><strong>こだま850</strong> / 名古屋→新横浜</td>
+<td><strong>予約済み</strong></td>
+</tr>
+<tr>
+<td>21:53-22:03</td>
+<td>（徒歩）新横浜駅</td>
+<td>新幹線⇔相鉄・約10分</td>
+</tr>
+<tr>
+<td>22:03-22:22</td>
+<td>相鉄ホーム待機</td>
+<td>直通発車まで</td>
+</tr>
+<tr>
+<td>22:22-22:58</td>
+<td>新横浜⇒海老名</td>
+<td>相鉄直通・乗り換えなし。海老名着 <strong>22:58</strong>（目標22:30より約30分遅れ）</td>
+</tr>
+</tbody>
+</table>
+<h2 id="todoリスト">ToDoリスト</h2>
+<table>
+<thead>
+<tr>
+<th>優先順位</th>
+<th>フラグ</th>
+<th></th>
+<th>やること</th>
+<th>結果</th>
+<th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td></td>
+<td>Atomカメラ</td>
+<td>交換 / <strong>最優先</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td>郵便物</td>
+<td>ファイルを分別</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td></td>
+<td>お薬手帳</td>
+<td>最新の２つは写真にとる</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td></td>
+<td>Switchbotアップデート / 場所を変えるかも</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td></td>
+<td>スマホ接続</td>
+<td>２つのPCで確認</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td></td>
+<td>非常ベル</td>
+<td>３か所確認する。</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td></td>
+<td>登記の確認</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td></td>
+<td>ラズパイのTeamViewer確認</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td></td>
+<td>除草剤をまく</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td></td>
+<td>人感センサー</td>
+<td>バッテリーの確認</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>11</td>
+<td></td>
+<td>食料を買う</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>12</td>
+<td>Pass</td>
+<td>郵便貯金の記帳</td>
+<td>２か月に１度は行うこと</td>
+<td></td>
+<td>今回Pass</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Pass</td>
+<td>三菱UFJの記帳</td>
+<td>４月１０月に行うこと</td>
+<td></td>
+<td>今回Pass</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Pass</td>
+<td>プリンター紙補給</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>15</td>
+<td>Pass</td>
+<td>ノートパソコンに / 雑誌をいれる。ハルメク</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>16</td>
+<td>Pass</td>
+<td>火災報知器</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>17</td>
+<td>Pass</td>
+<td>使い方動画</td>
+<td>２つのPCに保存</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>18</td>
+<td>Pass</td>
+<td>鍵合わせ</td>
+<td>隙間は7mm</td>
+<td></td>
+<td>今回Pass</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Pass</td>
+<td>美容室</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>20</td>
+<td>Pass</td>
+<td>車椅子</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="帰りの持ち物">帰りの持ち物</h2>
+<table>
+<thead>
+<tr>
+<th>チェック</th>
+<th>持ち物</th>
+<th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>スマホ</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>パソコン</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>クレジットカード</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>ネッククーラー</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>敬老パス</td>
+<td>置いておく</td>
+</tr>
+</tbody>
+</table>
+
+</body>
+</html>
