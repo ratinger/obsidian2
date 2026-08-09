@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>池袋 本屋・家電・金券（2026-08-11）</name>
+    <description>東口＝西武／ヨドバシ側、西口＝東武側</description>
+    <Folder>
+      <name>駅</name>
+      <Placemark>
+        <name>池袋駅</name>
+        <Point><coordinates>139.710900,35.729503,0</coordinates></Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>家電</name>
+      <Placemark>
+        <name>ヨドバシカメラ マルチメディア池袋</name>
+        <description>南池袋1-28-1／9:30-22:00</description>
+        <Point><coordinates>139.712850,35.729150,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>ビックカメラ 池袋本店</name>
+        <description>東池袋1-41-5</description>
+        <Point><coordinates>139.714500,35.731700,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>ヤマダデンキ LABI 池袋</name>
+        <description>東池袋1-5-7</description>
+        <Point><coordinates>139.713694,35.730950,0</coordinates></Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>本屋</name>
+      <Placemark>
+        <name>三省堂書店 池袋本店</name>
+        <description>ヨドバシ同ビル系／10:00-21:00</description>
+        <Point><coordinates>139.712550,35.729050,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>ジュンク堂書店 池袋本店</name>
+        <description>南池袋2-15-5／10:00-22:00</description>
+        <Point><coordinates>139.712380,35.726842,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>紀伊國屋書店 池袋店（東武7F）</name>
+        <description>西口・東武百貨店／10:00-20:00</description>
+        <Point><coordinates>139.709700,35.729600,0</coordinates></Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>金券</name>
+      <Placemark>
+        <name>J・マーケット ISP店</name>
+        <description>東口地下・ジェフ</description>
+        <Point><coordinates>139.712200,35.728900,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>J・マーケット 東武ホープセンター店</name>
+        <description>西口寄り・ジェフ</description>
+        <Point><coordinates>139.710200,35.729400,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>アクセスチケット 池袋西口店</name>
+        <description>西池袋1-15-2・ジェフ</description>
+        <Point><coordinates>139.708800,35.730100,0</coordinates></Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

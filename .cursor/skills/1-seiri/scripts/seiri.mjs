@@ -375,13 +375,25 @@ async function main() {
 
   for (const name of files) {
     const srcPath = path.join(tempDir, name);
-    const originalContent = await fs.readFile(srcPath, "utf8");
-    const { frontmatter, body } = parseFrontmatter(originalContent);
-    const tags = generateTags(name, frontmatter, body);
-    const summary = generateSummary(name, frontmatter, body);
-    const enriched = applyMetadata(originalContent, tags, summary);
+    const ext = path.extname(name).toLowerCase();
+    const isText =
+      ext === ".md" || ext === ".txt" || ext === ".markdown" || ext === "";
 
-    await fs.writeFile(srcPath, enriched, "utf8");
+    let tags;
+    let summary;
+
+    if (isText) {
+      const originalContent = await fs.readFile(srcPath, "utf8");
+      const { frontmatter, body } = parseFrontmatter(originalContent);
+      tags = generateTags(name, frontmatter, body);
+      summary = generateSummary(name, frontmatter, body);
+      const enriched = applyMetadata(originalContent, tags, summary);
+      await fs.writeFile(srcPath, enriched, "utf8");
+    } else {
+      // PDF 等のバイナリは中身を書き換えない（破壊防止）。ファイル名からタグ・概要のみ生成。
+      tags = generateTags(name, {}, "");
+      summary = generateSummary(name, {}, "");
+    }
 
     const newName = buildStoredName(name, datePrefix);
     let targetPath = path.join(storedDir, newName);

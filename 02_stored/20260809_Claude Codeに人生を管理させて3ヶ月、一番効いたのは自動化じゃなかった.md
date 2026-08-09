@@ -1,10 +1,23 @@
 ---
-title: "Claude Codeに人生を管理させて3ヶ月、一番効いたのは自動化じゃなかった"
+title: Claude Codeに人生を管理させて3ヶ月、一番効いたのは自動化じゃなかった
 published: 2026-06-11
 source: "https://qiita.com/ktdatascience/items/3c8949b62ce1dfe7a024"
 author:
-  - "[[ktdatascience]]"
+  - [[ktdatascience]]
+tags:
+  - Claude
+  - MCP
+  - AI
+  - 記事
+  - 自動化
+summary: Claude Codeで人生管理、効いたのは自動化より習慣化
 ---
+
+<!-- vault-seiri:start -->
+#Claude #MCP #AI #記事 #自動化
+
+> Claude Codeで人生管理、効いたのは自動化より習慣化
+<!-- vault-seiri:end -->
 [【2026年上半期】AI活用を振り返ろう！](https://qiita.com/official-events/9d632f51614ebd7b333c)
 
 [
