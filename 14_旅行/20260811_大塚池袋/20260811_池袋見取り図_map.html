@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>大塚 ホテル・本屋・食事マップ</title>
+  <title>池袋 本屋・家電・金券マップ</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <style>
     html, body { margin: 0; height: 100%; font-family: "Hiragino Sans", "Noto Sans JP", Meiryo, sans-serif; }
@@ -35,34 +35,42 @@
 <body>
   <div id="wrap">
     <header>
-      <h1>大塚駅周辺マップ（ホテル・本屋・食事）</h1>
-      <p>北口＝ロイヤルホスト／山下書店　・　南口＝アトレヴィ／ホテル　｜　2026-08-11 旅行用</p>
+      <h1>池袋駅周辺マップ（本屋・家電・金券）</h1>
+      <p>東口＝ヨドバシHDビル＋西武（南隣）　・　西口＝東武　｜　ヨドバシは西武店内ではなく同ビル／隣接地　｜　2026-08-11</p>
     </header>
     <div id="map"></div>
   </div>
   <div class="legend">
-    <div><span class="dot" style="background:#8e24aa"></span>ホテル</div>
-    <div><span class="dot" style="background:#fb8c00"></span>食事</div>
+    <div><span class="dot" style="background:#e53935"></span>家電</div>
     <div><span class="dot" style="background:#1e88e5"></span>本屋</div>
+    <div><span class="dot" style="background:#43a047"></span>金券</div>
     <div><span class="dot" style="background:#6d4c41"></span>駅</div>
+    <div><span class="dot" style="background:#757575"></span>百貨店</div>
   </div>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script>
+    // 座標は OpenStreetMap(Overpass) の施設・建物中心を優先。
+    // ヨドバシ＝ヨドバシHD池袋ビル内（西武店内テナントではない／西武は南寄り）。
+    // アクセスチケットのみ住所ベースの概位（OSM未登録）。
     const places = [
-      { name: "大塚駅（JR）", cat: "駅", lat: 35.731833, lng: 139.728060 },
-      { name: "都電 大塚駅前", cat: "駅", lat: 35.731550, lng: 139.728350 },
-      { name: "ホテル ベルクラシック", cat: "ホテル", lat: 35.731250, lng: 139.728700 },
-      { name: "アトレヴィ大塚", cat: "食事", lat: 35.731500, lng: 139.728200 },
-      { name: "旭屋書店（アトレヴィ4F）", cat: "本屋", lat: 35.731420, lng: 139.728280 },
-      { name: "ロイヤルホスト（北口）", cat: "食事", lat: 35.732450, lng: 139.727950 },
-      { name: "山下書店（北口・24h）", cat: "本屋", lat: 35.732380, lng: 139.727880 },
-      { name: "新大塚駅（丸ノ内）", cat: "駅", lat: 35.725640, lng: 139.728620 },
+      { name: "池袋駅", cat: "駅", lat: 35.729643, lng: 139.710900, note: "駅中央付近" },
+      { name: "ヨドバシカメラ", cat: "家電", lat: 35.729888, lng: 139.711953, note: "OSM: ヨドバシカメラ／HDビル北寄り" },
+      { name: "西武池袋本店", cat: "その他", lat: 35.728700, lng: 139.711700, note: "ヨドバシHDビル南寄り（売場縮小後）" },
+      { name: "三省堂書店", cat: "本屋", lat: 35.728850, lng: 139.711900, note: "南池袋1-28-1・ヨドバシ同住所ブロック" },
+      { name: "ジュンク堂 本店", cat: "本屋", lat: 35.726880, lng: 139.712235, note: "OSM: 南池袋2-15-5" },
+      { name: "ビックカメラ 本店", cat: "家電", lat: 35.729761, lng: 139.714227, note: "OSM: 東池袋側" },
+      { name: "ヤマダ LABI", cat: "家電", lat: 35.730916, lng: 139.713578, note: "OSM: LABI1" },
+      { name: "東武百貨店", cat: "その他", lat: 35.729785, lng: 139.710340, note: "OSM: 池袋東武百貨店" },
+      { name: "紀伊國屋(東武7F)", cat: "本屋", lat: 35.729850, lng: 139.710400, note: "東武百貨店内" },
+      { name: "J・マーケット ISP", cat: "金券", lat: 35.730350, lng: 139.712719, note: "OSM: ISP南館／南池袋1-29-1" },
+      { name: "J・マーケット ホープ", cat: "金券", lat: 35.730474, lng: 139.709853, note: "OSM: 東武ホープセンター" },
+      { name: "アクセスチケット 西口", cat: "金券", lat: 35.730400, lng: 139.708900, note: "概位: 西池袋1-15-2 東武会館別館" },
     ];
 
-    const colors = { "ホテル": "#8e24aa", "食事": "#fb8c00", "本屋": "#1e88e5", "駅": "#6d4c41" };
+    const colors = { "家電": "#e53935", "本屋": "#1e88e5", "金券": "#43a047", "駅": "#6d4c41", "その他": "#757575" };
 
     const map = L.map("map", { zoomControl: true, attributionControl: true })
-      .setView([35.7316, 139.7282], 17);
+      .setView([35.7296, 139.7118], 16);
 
     L.tileLayer("https://{s}.tile.openstreetmap.jp/{z}/{x}/{y}.png", {
       maxZoom: 19,
@@ -81,35 +89,37 @@
     const bounds = [];
     places.forEach((p) => {
       const c = colors[p.cat] || "#333";
+      const note = p.note ? `<br><small>${p.note}</small>` : "";
       L.marker([p.lat, p.lng], { icon: circleIcon(c) })
         .addTo(map)
-        .bindPopup(`<b>${p.name}</b><br>${p.cat}`);
+        .bindPopup(`<b>${p.name}</b><br>${p.cat}${note}`);
       L.marker([p.lat, p.lng], {
         icon: L.divIcon({
           className: "pin-label",
           html: p.name,
-          iconSize: [160, 18],
+          iconSize: [140, 18],
           iconAnchor: [-10, 9],
         }),
         interactive: false,
       }).addTo(map);
       bounds.push([p.lat, p.lng]);
     });
-    map.fitBounds(bounds, { padding: [40, 40], maxZoom: 17 });
+    map.fitBounds(bounds, { padding: [40, 40], maxZoom: 16 });
 
-    L.marker([35.73270, 139.72720], {
+    // 東口／西口の目安ラベル
+    L.marker([35.7280, 139.7135], {
       icon: L.divIcon({
         className: "pin-label",
-        html: "【北口エリア】",
+        html: "【東口エリア】",
         iconSize: [100, 18],
         iconAnchor: [50, 9],
       }),
       interactive: false,
     }).addTo(map);
-    L.marker([35.73095, 139.72890], {
+    L.marker([35.7308, 139.7084], {
       icon: L.divIcon({
         className: "pin-label",
-        html: "【南口エリア】",
+        html: "【西口エリア】",
         iconSize: [100, 18],
         iconAnchor: [50, 9],
       }),
