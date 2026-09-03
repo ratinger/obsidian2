@@ -1,3 +1,17 @@
+---
+tags:
+  - Cursor
+  - Skill
+  - Claude
+  - 調査
+summary: CursorのSkillsとClaude Cowork調査Skillの整理
+---
+
+<!-- vault-seiri:start -->
+#Cursor #Skill #Claude #調査
+
+> CursorのSkillsとClaude Cowork調査Skillの整理
+<!-- vault-seiri:end -->
 # CursorのSkillsとClaude Coworkのaccount-researchについて
 
 ## 1. 質問の背景
