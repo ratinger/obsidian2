@@ -11,10 +11,14 @@
             "id": "17de17a7cc3dbc1a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "00_temporary/医療,介護の仕事でチームワークを発揮,高めるために必要なものとは.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新規タブ"
+              "title": "医療,介護の仕事でチームワークを発揮,高めるために必要なものとは"
             }
           }
         ]
@@ -192,8 +196,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4673c3aa751c80ec",
+  "active": "17de17a7cc3dbc1a",
   "lastOpenFiles": [
+    "00_temporary/相続税_最新路線価_20240815.md (1).pdf",
+    "00_temporary/医療,介護の仕事でチームワークを発揮,高めるために必要なものとは.md",
+    "00_temporary/20260829_Claude_CoworkとClaude_Code比較.md",
     "02_stored/20260823_webサイトを持つ.md",
     "02_stored/20260823_cursor_skills_claude_cowork_summary.md",
     "02_stored/20260809_調査_厚誠会.md",
@@ -223,7 +230,6 @@
     "ようこそ.md",
     "00_temporary/記録のための日記から、対話で育てる日記へ ーClaude × Obsidian × MCPで作る思考のジャーナリングー  フューチャー技術ブログ.md",
     "01_index",
-    "01_index.md",
     "02_stored",
     "01_index",
     "00_temporary"
