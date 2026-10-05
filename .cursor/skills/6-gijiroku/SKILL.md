@@ -3,7 +3,7 @@ name: 6-gijiroku
 description: >-
   Transcribes the newest recording (Web会議 mkv or 電話 mp3) with Python
   gemini-3.5-transcribe. Writes the transcript next to the audio and
-  minutes under 11_名古屋/ or 12_八千代/. Always AskQuestion first: Web会議
+  minutes under 11_名古屋/ or 14_八千代/. Always AskQuestion first: Web会議
   or 電話, then the counterpart name. 伸一郎 is always a participant.
   Use when the user runs /6_gijiroku, says 6_gijiroku, or wants a 議事録 from
   a Web会議 or phone recording.
@@ -63,7 +63,7 @@ description: >-
    | 参加者 | 伸一郎 ＋ 選んだ相手（音声に出た人だけ書く） | 同じ |
    | 音声フォルダ | `C:\Users\ozeki\Videos\Web会議` | `C:\Users\ozeki\Videos\電話` |
    | 探す拡張子 | `.mkv`（直下なら日付フォルダへ移す） | `.mp3`（mkv が電話フォルダにあれば mp3 にしてから） |
-   | 議事録 | `11_名古屋` | `12_八千代` |
+   | 議事録 | `11_名古屋` | `14_八千代` |
 
 1. 選んだ種類のフォルダから、更新日時が **最新** の対象ファイルを1本取る（日付フォルダも含めて再帰）。0件なら止めて報告する。
 
@@ -129,7 +129,7 @@ python .cursor/skills/6-gijiroku/scripts/transcribe.py "C:\Users\ozeki\Videos\We
 | 音声 | `C:\Users\ozeki\Videos\電話\YYYYMMDD` | `YYYYMMDD_相手.mp3` |
 | 音声（分割） | 同じ | `part0.mp3` / `part1.mp3` / `part2.mp3`（15分単位） |
 | 文字起こし | 同じ | `YYYYMMDD_相手_文字起こし.md` |
-| 議事録 | `12_八千代` | `YYYYMMDD_相手_議事録.md` |
+| 議事録 | `14_八千代` | `YYYYMMDD_相手_議事録.md` |
 
 ### 文字起こしの先頭
 
@@ -179,4 +179,4 @@ Web会議:
 - 対象フォルダに録音が無い
 - `ffmpeg` / `ffprobe` / Python（`google-genai`・APIキー）が動かない → 備考１
 - 無料枠のトークン上限 → より短い分割で再試行
-- 録音は個人情報。Vault に残すのは議事録だけ（`11_名古屋` または `12_八千代`）
+- 録音は個人情報。Vault に残すのは議事録だけ（`11_名古屋` または `14_八千代`）
